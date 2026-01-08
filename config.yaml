@@ -1,11 +1,19 @@
 name: "Autopilot"
 description: "Autopilot"
 version: "1.0.0"
-slug: "Autopilot"
+slug: "autopilot"
 init: false
+apparmor: true
+
 arch:
   - aarch64
   - amd64
   - armhf
   - armv7
   - i386
+
+services:
+  - mqtt:need
+
+discovery:
+  - mqtt
